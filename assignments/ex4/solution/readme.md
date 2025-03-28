@@ -1,6 +1,6 @@
 # Class 'Rational'
 
-> In this directory you can find a python package, `rational_package` and a jupyter notebook, `Rational_test.ipynb` which contains the solutions for exercise 4, relevant to buliding a class object for handling **Rational Numbers**.
+In this directory you can find a python package, `rational_package` and a jupyter notebook, `Rational_test.ipynb` which contains the solutions for exercise 4, relevant to buliding a class object for handling **Rational Numbers**.
 
 ## rational_package
 
