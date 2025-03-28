@@ -1,5 +1,4 @@
 import math
-import sys
 from continued_fractions import continued_fractions
 
 class Rational():
@@ -28,18 +27,14 @@ class Rational():
 		
 		x = number # number
 		return continued_fractions(x, self.precision)
-		
 			
 	def __abs__(self):
-		return Rational(abs(self.numerator/self.denominator), self.precision)
+		return Rational(abs(self.numerator / self.denominator), self.precision)
 		
 	def __str__(self):
 		return f"{self.numerator}/{self.denominator}"
-		
 	def __repr__(self):
-		value = self.numerator/self.denominator
-		return f"rational({value}, precision={self.precision})"
-		
+		return f"rational({self.numerator / self.denominator}, precision={self.precision})"
 		
 	# Arithmatic operators
 	def __add__(self, other): #addition
@@ -63,7 +58,7 @@ class Rational():
 		deno = self.denominator * other.denominator
 		return Rational(num/deno, self.precision)
 		
-	def __truediv__(self, other): #division
+	def __div__(self, other): #division
 		if not isinstance(other, Rational):
 			other = Rational(other)
 		if other.numerator == 0:
@@ -71,7 +66,6 @@ class Rational():
 		num = self.numerator * other.denominator 
 		deno = self.denominator * other.numerator
 		return Rational(num/deno, self.precision)
-		
 		
 	# Comparison operators
 	def __eq__(self, other): #equal to
@@ -89,12 +83,12 @@ class Rational():
 			other = Rational(other)
 		return self.numerator * other.denominator < self.denominator * other.numerator
 		
-	def __ge__(self, other): #greater than or equal to
+	def __geq__(self, other): #greater than or equal to
 		if not isinstance(other, Rational):
 			other = Rational(other)
 		return self.numerator * other.denominator >= self.denominator * other.numerator
 		
-	def __le__(self, other): #less than or equal to
+	def __leq__(self, other): #less than or equal to
 		if not isinstance(other, Rational):
 			other = Rational(other)
 		return self.numerator * other.denominator <= self.denominator * other.numerator
