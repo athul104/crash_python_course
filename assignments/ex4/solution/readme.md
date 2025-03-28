@@ -19,7 +19,7 @@ The class **Rational** has the following operators or dunder functions:
 
 In this class, the numerator and denominator of the rational number is stored internally, where the sign of the number stored in the numerator. The fraction will be given in its reduced form where both numerator and denominator has no common factors other than 1.
 
-The external libraries used in these two scripts are `math` and `sys`. The optional part of the exercise of using the dunder function `__hash__` is not a part of the class **Rational**.
+The external libraries used in these two scripts are `math` and `sys`. The optional part of the exercise of using the dunder function `__hash__` has not been added to the class **Rational**.
 
 ## Rational_test.ipynb
 
