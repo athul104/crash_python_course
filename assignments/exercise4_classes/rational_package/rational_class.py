@@ -5,7 +5,7 @@ from continued_fractions import continued_fractions
 class Rational():
 	"""Documentation of class Rational"""
 	
-	def __init__(self, number, precision = 1e-5):
+	def __init__(self, number, precision = 1e-10):
 		"""
         	Initialize a Rational object.
 
@@ -14,20 +14,33 @@ class Rational():
 		number : float or int
 			 Number to convert to rational.
 		precision : float (optional)
-			    Precision (0 ≤ precision ≤ 1, default : 1e-5).
+			    Precision (0 ≤ precision ≤ 1, default : 1e-10).
         """
 		if not (0 <= precision <= 1):
 			print("Error: precision must be between 0 and 1.")
 			sys.exit(1)
 			
 		self.precision = precision
-		self.numerator, self.denominator = self._approximate(number)
+		self._numerator, self._denominator = self._approximate(number)
 		
 	def _approximate(self, number):
 		"""Approximate number as (numerator, denominator) using continued fractions."""
-		
 		x = number # number
 		return continued_fractions(x, self.precision)
+		
+	@property
+	def numerator(self):
+		"""Returns the numerator (read-only)."""
+		return self._numerator
+		
+	@property
+	def denominator(self):
+		"""Returns the denominator (read-only)."""
+		return self._denominator
+		
+	def __hash__(self):
+		"""Make Rational hashable."""
+		return hash((self.numerator, self.denominator))
 		
 			
 	def __abs__(self):
@@ -108,8 +121,8 @@ class Rational():
 		
 if __name__ == "__main__":
 	try:
-		val = 1.245
-		rational = Rational(1.245)
+		val = 0.5647
+		rational = Rational(val)
 		print(f"The rational form of {val} = {rational}")
 		
 	except ValueError as e:
