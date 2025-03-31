@@ -11,7 +11,7 @@ This repository collects material for the course held in SISSA for 1st year PhD 
 - [exercise3_pythonbasics](exercise3_pythonbasics) contains the exercises for the 3rd assignment, in which students should solve some simple mathematical problems by writing python functions and scripts/programs.
 - [exercise4_classes](exercise4_classes) contains the text of the last exercise. The assignment wraps up lot (if not everything) we have learned during the lectures and is supposed to push you a bit further.
 
-> Solutions of exercises (except to ex2 which explicitly requires to create a new repo) can be uploaded directly to your fork of this repository. Try to keep the repo tidy though, you can make a sub-directory in each excercise directory called `solution` or you can make a `solutions` directory from the root of the repository, your choice.
+> Solutions of exercises (except to ex2 which explicitly requires to create a new repo) are uploaded inside respective directories inside the directory `solutions` in the root of the repository.
 
 ## Useful links:
 
