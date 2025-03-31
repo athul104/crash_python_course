@@ -25,11 +25,7 @@ for file in *; do
 	fi
 	
 	# defining the new name for the file with new extension '.filt'
-	if [[ "$keyword" != "unknown" ]]; then
-		new_name="${name}.${keyword}.filt"
-	else
-		new_name="${name}.filt" # files with unknown keywords (photon or energy) are not renamed, but extensions are modified
-	fi
+	new_name="${name}.${keyword}.filt" #if any file does not have any info on whether it is 'photon' or 'energy' then the filename will have 'unknown' as filename.
 	
 	cp "$file" "../$output_dir/bandpass_athul/$new_name" # copying the files from 'bandpass_raw' folder into 'bandpass_athul' folder after renaming
 done
