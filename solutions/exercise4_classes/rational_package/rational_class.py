@@ -44,12 +44,15 @@ class Rational():
 		
 			
 	def __abs__(self):
+		"""returns the absolute value of the rational number"""
 		return Rational(abs(self.numerator/self.denominator), self.precision)
 		
 	def __str__(self):
+		"""Returns the rational number as a string"""
 		return f"{self.numerator}/{self.denominator}"
 		
 	def __repr__(self):
+		"""Returns a string containing details about the decimal number and precision."""
 		value = self.numerator/self.denominator
 		return f"rational({value}, precision={self.precision})"
 		
